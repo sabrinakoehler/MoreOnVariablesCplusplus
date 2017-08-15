@@ -1,0 +1,110 @@
+Exercise 3.1 – “Write a program which asks the user his/her name, stores it in a variable called name, and displays Hello, followed by the value of name and as exclamation mark. An example session would look like this:
+What is your name? Bob
+Hello, Bob!”
+
+Code:
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main () {
+   string name;
+   cout<<"What is your name? ";
+   cin>>name;
+   cout<<name;
+   cout<<endl;
+   cout<<"Hello, ";
+   cout<<name;  
+   cout<<"!";
+   cout<<endl;
+  return 0;
+ }
+INPUT: Sabrina
+OUTPUT: What is your name? Sabrina
+     Hello, Sabrina!
+
+//
+Exercise 3.2 – “Write a program which asks the user his/her last name, stores it in a variable called 1name, then asks What is your age?  and stores it in a variable called age. After this, program displays a userid, for example as follows:”
+What is your last name? Jones
+What is your age? 20
+Your user id is: Jones20
+
+Code:
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main () {
+   string lname;
+   cout<<"What is your last name? ";
+   cin>>lname;
+   cout<<lname;
+   cout<<endl;
+   
+   int age;
+   cout<<"What is your age? ";
+   cin>>age;
+   cout<<age;
+   cout<<endl;
+   
+   cout<<"Your user id is: ";
+   cout<<lname;
+   cout<<age;
+   cout<<endl;
+   
+  return 0;
+}
+INPUT:
+Koehler
+26
+OUTPUT:
+What is your last name? Koehler
+What is your age? 26
+Your user id is: Koehler26
+
+//
+Exercise 3.3 – “Write a program which asks the user his/her major, stores it in a variable called major, then asks What is your GPA? And stores it in a variable called gpa. Next, ask a question based on the answers from the previous two questions. An example session follows; pay attention to how the prompts are spaced.”
+What is your major? Computer Science
+What is your GPA? 3.52
+Computer Science is very hard;
+Why do you think you have a GPA of 3.52?
+
+Code:
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main () {
+   
+   string major;
+   cout<<"What is your major? ";
+   getline(cin, major);  //GETLINE allows two words in a string to appear 
+   cout<<major;
+   cout<<endl;
+   
+   float gpa;
+   cout<<"What is your gpa? ";
+   cin>>gpa;
+   cout<<gpa;
+   cout<<endl;
+   
+   cout<<major;   
+   cout<<" is very hard; why do you think";
+   cout<<endl;
+   cout<<"you have a gpa of ";
+   cout<<gpa;
+   cout<<"?";
+   cout<<endl;
+   
+  return 0;
+}
+
+INPUT:
+Computer science
+3.4
+OUTPUT:
+What is your major? Computer science
+What is your gpa? 3.4
+IST is a challenging course;
+Why do you think you have a GPA of 3.4?
+
